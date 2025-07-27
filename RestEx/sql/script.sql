@@ -1,0 +1,19 @@
+
+CREATE DATABASE `sampledb`
+
+USE `sampledb`;
+
+CREATE TABLE `User` (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	username VARCHAR(100) UNIQUE NOT NULL,
+	password VARCHAR(100) NULL
+);
+
+
+CREATE TABLE `Product` (
+	id INT PRIMARY KEY auto_increment,
+	name VARCHAR(100) UNIQUE NOT NULL,
+	price NUMERIC(10,2) NOT NULL
+);
+
+
