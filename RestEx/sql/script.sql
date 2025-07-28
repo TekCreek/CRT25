@@ -1,5 +1,5 @@
 
-CREATE DATABASE `sampledb`
+CREATE DATABASE `sampledb`;
 
 USE `sampledb`;
 
