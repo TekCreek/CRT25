@@ -6,9 +6,14 @@
  *
  * Types -
  *
- * Remote Proxy - For accessing a remote object.
+ * Remote Proxy - For accessing a remote object e.g. use case in RMI, API clients
+ * 
  * Virtual Proxy - For deferred initialization
+ * 
  * Protection proxy - for secured and controlled access to the object.
+ * 
+ * Smart proxy - for enhancing the behaviour such as logging, caching etc with 
+ *               out altering the actual object.
  */
 
 interface StockAPI {
