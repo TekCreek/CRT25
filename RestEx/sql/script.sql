@@ -20,7 +20,7 @@ INSERT INTO `User`
 (username, password)
 VALUES('a', 'pwd');
 
-INSERT INTO `Product`` (name,price)
+INSERT INTO `Product` (name,price)
 VALUES
  ('x',10.00),
  ('y',20.00),
