@@ -36,3 +36,6 @@ vol/
 *.zip
 *.class
 *.bkp
+
+/docker/vol/
+/docker/mynginx_html/
