@@ -61,7 +61,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhIiwiaWF0IjoxNzUzODU3MjU5LCJleHAiOjE3NTM4NjA4NTl9.p3NQ6p8VU4GZgNDqxZubZVdLCw5TDJZSxW6c5nHy5S7wQHDwiVq3FfoAY5SPJKB3",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhIiwiaWF0IjoxNzU0MzYyMzczLCJleHAiOjE3NTQzNjU5NzN9.t-ocSzak-G0h1khIfVQwCI3rfTWvdnGgTK64zS7X3pY",
 							"type": "string"
 						}
 					]
@@ -83,6 +83,42 @@
 					"path": [
 						"api",
 						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RestEx_GETProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhIiwiaWF0IjoxNzU0MzYyMzczLCJleHAiOjE3NTQzNjU5NzN9.t-ocSzak-G0h1khIfVQwCI3rfTWvdnGgTK64zS7X3pY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhIiwiaWF0IjoxNzUzNjk2MDM5LCJleHAiOjE3NTM2OTk2Mzl9.1HNmdmWounbZG6cGKv6ooh5QN2Et3kOTv4SVR8Ox44M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"1"
 					]
 				}
 			},
@@ -141,7 +177,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhIiwiaWF0IjoxNzUzODU0NzUyLCJleHAiOjE3NTM4NTgzNTJ9.rQfu-M1LsRUG81FH3s2Ca1jQ4K2551-Ee0dkbFRxBg3J92bnOiHkNh7FrQkgl0J6",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhIiwiaWF0IjoxNzU0MzYyMzczLCJleHAiOjE3NTQzNjU5NzN9.t-ocSzak-G0h1khIfVQwCI3rfTWvdnGgTK64zS7X3pY",
 							"type": "string"
 						}
 					]
@@ -156,7 +192,51 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": 4,\n    \"name\": \"ab\",\n    \"price\": 291.0\n}",
+					"raw": "{\n    \"id\": 8,\n    \"name\": \"ab\",\n    \"price\": 291.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RestEx_CreateProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhIiwiaWF0IjoxNzU0MzYyMzczLCJleHAiOjE3NTQzNjU5NzN9.t-ocSzak-G0h1khIfVQwCI3rfTWvdnGgTK64zS7X3pY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhIiwiaWF0IjoxNzUzNjk2MDM5LCJleHAiOjE3NTM2OTk2Mzl9.1HNmdmWounbZG6cGKv6ooh5QN2Et3kOTv4SVR8Ox44M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"ab\",\n    \"price\": 291.0\n}",
 					"options": {
 						"raw": {
 							"language": "json"

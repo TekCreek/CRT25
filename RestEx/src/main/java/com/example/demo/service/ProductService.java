@@ -19,7 +19,9 @@ public class ProductService {
         return productRepository.findAll();
     }
 
-    public Product save(Product product) {
+    public Product save(Product product) throws ServiceLayerException {
+        Long id = product.getId();
+        if (id != null) throw new ServiceLayerException("Product id is not expected in the request, remove id field.");
         return productRepository.save(product);
     }
 
@@ -46,5 +48,13 @@ public class ProductService {
         Optional<Product> dbProduct = productRepository.findById(productId);
         if (dbProduct.isEmpty()) throw new ServiceLayerException("Invalid product id");
         productRepository.delete(dbProduct.get());
+    }
+
+    public Product find(long id) throws ServiceLayerException {
+        Optional<Product> product = productRepository.findById(id);
+        if (product.isEmpty()) {
+            throw new ServiceLayerException("Invalid product id");
+        }
+        return product.get();
     }
 }

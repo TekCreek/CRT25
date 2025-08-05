@@ -22,9 +22,24 @@ public class ProductController {
         return productService.findAll();
     }
 
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getProduct(@PathVariable long id) {
+        try {
+            return ResponseEntity.ok(productService.find(id));
+        } catch (ServiceLayerException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
+    }
+
+
     @PostMapping
-    public Product createProduct(@RequestBody Product product) {
-        return productService.save(product);
+    public ResponseEntity<?> createProduct(@RequestBody Product product) {
+        try {
+            return ResponseEntity.ok(productService.save(product));
+        } catch (ServiceLayerException e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+        }
     }
 
     @PostMapping("/find")
