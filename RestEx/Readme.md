@@ -2,9 +2,14 @@
 # Sample REST API Example with Docker 
 
 ```
-    mvn clean package
+    Note: Point to the RestEx folder and run maven clean package
+    RestEx> mvn clean package
     
-    docker compose up --build -d
+    Change to docker folder 
+    RestEx>cd docker
+    
+    Inside the docker folder run docker compose 
+    RestEx/docker> docker compose up --build -d
 ```
 
 ## Good resource for learning docker 
